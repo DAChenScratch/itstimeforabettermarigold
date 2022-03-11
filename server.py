@@ -2,7 +2,9 @@ import bottle
 import os
 from best_move import best
     # TODO: Do things with data
-
+@bottle.post('/')
+def redirect():
+    return "<h1>go to this website but with a /snake at the end</h1>"
 @bottle.post('/snake/ping')
 def ping():
   return 'pong'
